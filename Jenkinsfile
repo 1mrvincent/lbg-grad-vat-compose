@@ -7,8 +7,6 @@ pipeline {
   }
   agent any
   stages {
-
-    
     stage("Build DOcker Image"){
       steps {
         script {
@@ -45,6 +43,7 @@ pipeline {
           sh "put docker-compose.yaml"
           sh "exit"
         }
+      }
     }
 
     stage ("connect to runserver and execute compose") {
@@ -56,6 +55,5 @@ pipeline {
         }
       }
     }
-
   }
 }
