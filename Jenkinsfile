@@ -3,7 +3,7 @@ pipeline {
     registry = "vincentenyinwa/lbg-vat-compose"
     registryCredential = "dockerhub_id"
     dockerImage = ""
-    RUNSERVER = credential('DOCKER_RUN_SERVER')
+    RUNSERVER = credentials('DOCKER_RUN_SERVER')
   }
   agent any
   stages {
