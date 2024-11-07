@@ -10,6 +10,7 @@ pipeline {
     stage("Build DOcker Image"){
       steps {
         script {
+          sh "cd frontend-1"
           dockerImage=docker.build(registry)
         }
       }
