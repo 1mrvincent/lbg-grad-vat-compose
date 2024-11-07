@@ -1,20 +1,20 @@
 version: "3.8"
 services:
   calc-api:
-    image: rlir/lbg-grad-compose-api
+    image: vincentenyinwa/lbg-grad-compose-api
     build: ./calculator-api
     ports:
     - target: 8080
       published: 8081
   front-a:
-    image: rlir/lbg-grad-compose-front-a
+    image: vincentenyinwa/lbg-grad-compose-front-a
     build:
       context: ./frontend-1
     ports:
       - target: 80
         published: 80
   front-b:
-    image: rlir/lbg-grad-compose-front-b
+    image: vincentenyinwa/lbg-grad-compose-front-b
     build:
       context: ./frontend-2
     ports:
